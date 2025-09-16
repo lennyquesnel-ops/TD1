@@ -3,23 +3,25 @@ let egalite = 0;
 let victoire = 0;
 let defaite = 0;
 
-mettreajour();
-
-function getRandomint(max){
-    return Math.floor(Math.random()*max);
-}
-
 function mettreajour(){
 document.getElementById("egalite").innerHTML = egalite;
 document.getElementById("victoire").innerHTML = victoire;
 document.getElementById("defaite").innerHTML = defaite;
 }
 
+function affichechoix(choix){
+    document.getElementById("choixRobot").innerHTML = choix 
+}
+
+function getRandomint(max){
+    return Math.floor(Math.random()*max);
+}
 
 function choixRobot(){
     let nb = getRandomint(3);
     return nb;
 }
+mettreajour();
 
 var Pierre = document.getElementById('Pierre');
 Pierre.addEventListener("click", function(){
@@ -27,6 +29,7 @@ Pierre.addEventListener("click", function(){
     if (choix == "Pierre") egalite++;
     if (choix == "Feuille") defaite++;
     if (choix == "Ciseaux") victoire++;
+    affichechoix(choix);
    mettreajour();
 });
 
@@ -36,6 +39,7 @@ Feuille.addEventListener("click", function(){
     if (choix == "Pierre") victoire++;
     if (choix == "Feuille") egalite++;
     if (choix == "Ciseaux") defaite++;
+    affichechoix(choix);
     mettreajour();
 });
 
@@ -45,6 +49,7 @@ Ciseaux.addEventListener("click", function(){
     if (choix == "Pierre") defaite++;
     if (choix == "Feuille") victoire++;
     if (choix == "Ciseaux") egalite++;
+    affichechoix(choix);
     mettreajour();
 });
 

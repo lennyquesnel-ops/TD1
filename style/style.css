@@ -1,0 +1,67 @@
+
+.score-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* ✅ Centre horizontalement les éléments enfants */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+        .score {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .score p {
+            margin: 0;
+            min-width: 150px; /* Pour un alignement propre */
+        }
+
+h1 {
+    text-align: center;
+}
+/* Styles de base */
+.shifumi {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* facultatif : pour centrer aussi verticalement */
+    flex-wrap: wrap; /* pour que les boutons aillent à la ligne si besoin */
+}
+
+.reini-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* si tu veux de l'espace au-dessus */
+}
+
+.shifumi button,
+#reini {
+    
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #444444;
+    border-radius: 8px;
+    background-color: #4717e7;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover (survol) */
+.shifumi button:hover,
+#reini:hover {
+    background-color: #0f016a;
+    border-color: #000;
+    transform: scale(1.05);
+}
+
+/* Active (clic) */
+.shifumi button:active,
+#reini:active {
+    background-color: #bbb;
+    transform: scale(0.95);
+}
+

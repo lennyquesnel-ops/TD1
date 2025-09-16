@@ -1,29 +1,43 @@
 <!DOCTYPE html>
+
 <html>
-    <head>
-        <title>Ma page</title>
-        
-    </head>
-    <body>
+<head>
+    <title>Ma page</title>
+    <link rel="stylesheet" href="style/style.css">
 
-        <h1>Shifumi</h1>
+</head>
 
-        <div class="shifumi">
-            <button id = "Pierre">Pierre</button>
-            <button id = "Feuille">Feuille</button>
-            <button id = "Ciseaux">Ciseaux</button>
+<body>
+
+    <h1>Shifumi</h1>
+    
+    <div class="shifumi">
+        <button id="Pierre">Pierre</button>
+        <button id="Feuille">Feuille</button>
+        <button id="Ciseaux">Ciseaux</button>
+    </div>
+    <p>Pierre a joué :</p>
+    <p id = 'choixRobot'></p>
+
+    <div class="score container">
+        <div class="score">
+            <p>Nombre d'égalité :</p>
+            <p id="egalite"> </p>
         </div>
+        <div class="score">
+            <p>Nombre de victoire :</p>
+            <p id="victoire"> </p>
+        </div>
+        <div class="score">
+            <p>Nombre de défaite :</p>
+            <p id="defaite"> </p>
+        </div>
+    </div>
+    <div class = reini-container>
+    <button id="reini">réinitialiser le score</button>
+    </div>
 
-        <span id="egalite"></span>
-        <span id="victoire"></span>
-        <span id="defaite"></span>
+    <script src="script/shifumi.js"></script>
+</body>
 
-
-        <button id = "reini">réinitialiser le score</button>
-
-
-        <script src="script/shifumi.js"></script>
-    </body>
 </html>
-
-
