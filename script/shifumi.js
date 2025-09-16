@@ -12,6 +12,13 @@ document.getElementById("defaite").innerHTML = defaite;
 function affichechoix(choix){
     document.getElementById("choixRobot").innerHTML = choix 
 }
+function affichechoix2(choix){
+    document.getElementById("choixH").innerHTML = choix 
+}
+
+function afficheresultat(result){
+    document.getElementById("resultat").innerHTML = result;
+}
 
 function getRandomint(max){
     return Math.floor(Math.random()*max);
@@ -26,9 +33,21 @@ mettreajour();
 var Pierre = document.getElementById('Pierre');
 Pierre.addEventListener("click", function(){
     var choix = tab[choixRobot()];
-    if (choix == "Pierre") egalite++;
-    if (choix == "Feuille") defaite++;
-    if (choix == "Ciseaux") victoire++;
+    var result;
+    if (choix == "Pierre"){
+        egalite++;
+        result = "égalité"
+    } 
+    if (choix == "Feuille"){
+        defaite++;
+        result = "défaite"
+    }
+    if (choix == "Ciseaux"){
+    victoire++;
+    result = "victoire"
+    }
+    afficheresultat(result);
+    affichechoix2("Pierre");
     affichechoix(choix);
    mettreajour();
 });
@@ -36,9 +55,20 @@ Pierre.addEventListener("click", function(){
 var Feuille = document.getElementById('Feuille');
 Feuille.addEventListener("click", function(){
     var choix = tab[choixRobot()];
-    if (choix == "Pierre") victoire++;
-    if (choix == "Feuille") egalite++;
-    if (choix == "Ciseaux") defaite++;
+    if (choix == "Pierre"){
+        victoire++;
+        result = "victoire"
+    } 
+    if (choix == "Feuille"){
+        egalite++;
+        result = "égalité"
+    }
+    if (choix == "Ciseaux"){
+    defaite++;
+    result = "défaite"
+    }
+    afficheresultat(result);
+    affichechoix2("Feuille");
     affichechoix(choix);
     mettreajour();
 });
@@ -46,9 +76,20 @@ Feuille.addEventListener("click", function(){
 var Ciseaux = document.getElementById('Ciseaux');
 Ciseaux.addEventListener("click", function(){
     var choix = tab[choixRobot()];
-    if (choix == "Pierre") defaite++;
-    if (choix == "Feuille") victoire++;
-    if (choix == "Ciseaux") egalite++;
+     if (choix == "Pierre"){
+        defaite++;
+        result = "défaite"
+    } 
+    if (choix == "Feuille"){
+        victoire++;
+        result = "victoire"
+    }
+    if (choix == "Ciseaux"){
+    egalite++;
+    result = "égalité"
+    }
+    afficheresultat(result);
+    affichechoix2("Ciseaux");
     affichechoix(choix);
     mettreajour();
 });
